@@ -1,0 +1,200 @@
+@mixin page_global_settings{
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color .8s ease;
+    transition: color .5s ease;
+}
+@mixin global_sections_settings {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin: $sections-margin;
+}
+
+@mixin global_div_title_setting {
+    background-image: linear-gradient(270deg, $gradient-start 0%, $gradient-end 100%);
+    color: $div-title-text-color;
+    margin: $divs-title-margin;
+    height: 24px;
+    .div_title{
+        margin-left: $divs-title-text-margin;
+    }
+}
+
+@mixin pink_button_global_settings {
+    background-color: $pink-but-back-color;
+    border: 1px solid $pink-but-border-color;
+    box-shadow: inset -1px -1px 0 0 $pink-but-box-color-in, inset 1px 1px 0 0 $pink-but-box-color-out;
+    height: 36px;
+    color: $mygifos-color;
+}
+
+@mixin white_button_global_settings {
+    background-color: $white-but-back-color;
+    border: 1px solid $white-but-border-color;
+    box-shadow: inset -1px -1px 0 0 $white-but-box-color-in, inset 1px 1px 0 0 $white-but-box-color-out;
+    height: 36px;
+    width: 144px;
+    color: $mygifos-color;
+}
+
+@mixin gray_button_global_settings {
+    background-color: $gray-but-back-color;
+    border: 1px solid $gray-but-border-color;
+    box-shadow: inset -1px -1px 0 0 $gray-but-box-color-in, inset 1px 1px 0 0 $gray-but-box-color-out;
+    height: 36px;
+}
+
+@mixin light_gray_button_global_settings {
+    background-color: $light-gray-but-back-color;
+    border: 1px solid $light-gray-but-border-color;
+    box-shadow: inset -1px -1px 0 0 $light-gray-but-box-color-in, inset 1px 1px 0 0 $light-gray-but-box-color-out;
+    height: 36px;
+}
+
+@mixin blue_button_settings {
+    background-color: $blue-but-back-color;
+    border: 1px solid $blue-but-border-color;
+    box-shadow: inset -2px -2px 0 0 $blue-but-box-color-in, inset 2px 2px 0 0 $blue-but-box-color-out;
+    width: 81px;
+    height: 34px;
+    color: $blue-but-text-color-out;
+    margin-top: 231px;
+    margin-left: 7px;
+    margin-bottom: 15px;
+}
+
+@mixin theme_night_list_setting{
+    background-color: $theme-night-list-back-color;
+    border: 1px solid $theme-night-list-border-color;
+    box-shadow: inset -1px -1px 0 0 $theme-night-list-box-color-in, inset 1px 1px 0 0 $theme-night-list-box-color-out;
+    color: $theme-night-list-text-color-out;
+} 
+
+@mixin theme_day_list_setting{
+    background-color: $theme-day-list-back-color;
+    border: 1px solid $theme-day-list-border-color;
+    box-shadow: inset -1px -1px 0 0 $theme-day-list-box-color-in, inset 1px 1px 0 0 $theme-day-list-box-color-out;
+} 
+
+@mixin gray_background_settings {
+    background: $gray-background-back-color;
+    box-shadow: inset -2px -2px 0 0 $gray-background-box-color-in, inset 2px 2px 0 0 $gray-background-box-color-out;
+}
+
+@mixin suggest_img_cont_settings {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 313px;
+    justify-content: flex-start;
+    @include gray_background_settings;
+    .suggest_img_title{
+        display: flex;
+        flex-flow: row nowrap;
+        height: 24px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .suggest_img{
+        height: 280px;
+    }
+}
+
+@mixin regular_text_settings {
+    font-size: 16px;
+    font-weight: 400;
+    color: $regular-text-color;
+    letter-spacing: 0;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+@mixin list_global_settings {
+    list-style: none;
+    display: none;
+    
+}
+
+@mixin text_input_gray {
+    background-color: $text-input-gray-back-color;
+    border: 1px solid $text-input-gray-border-color;
+    box-shadow: inset -2px -2px 0 0 $text-input-gray-box-color-in, inset 2px 2px 0 0 $text-input-gray-box-color-out;
+}
+
+@mixin text_input_pink {
+    display: flex;
+    background-color: $text-input-pink-back-color;
+    border: 1px solid $text-input-pink-border-color;
+    box-shadow: inset -2px -2px 0 0 $text-input-pink-box-color-in, inset 2px 2px 0 0 $text-input-pink-box-color-out;
+    height: 32px;
+    align-items: center;
+    p{
+        margin-left: 7px;
+    }
+}
+
+@mixin flex_row_settings {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex_column_settings {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+@mixin pink_hover_settings {
+    background-color: $on-hover-back-color;
+    box-shadow: inset -1px -1px 0 0 $on-hover-box-color-in, inset 1px 1px 0 0 $on-hover-box-color-out;
+    outline-offset:-2px;
+    outline: 1px dotted $on-hover-outline-color;
+}
+
+@mixin text_hover_outline {
+    outline: 1px dotted $text-hover-outline-color;
+}
+
+@mixin plain_btn_hover_settings {
+    outline-offset:-3px;
+    outline: 1px dotted $on-hover-outline-color;
+}
+
+@mixin white_btn_hover_settings {
+    outline-offset:-3px;
+    outline: 1px dotted $white-hover-outline-color;
+}
+
+@mixin trend_hover_settings {
+    outline-offset:-4px;
+    outline: 1px dotted $white-hover-outline-color;
+    background: $gray-background-back-color;
+    box-shadow: inset -2px -2px 0 0 $gray-background-box-color-in, inset 2px 2px 0 0 $gray-background-box-color-out;
+}
+
+@mixin discrete_progress_bar {
+    background: repeating-linear-gradient(
+        to right,
+        $progress_empty_color,
+        $progress_empty_color 10px,
+        $progress_back_color 10px,
+        $progress_back_color 12px
+      ),
+      repeating-linear-gradient(
+        to right,
+        $progress_fill_color,
+        $progress_fill_color 10px,
+        $progress_back_color 10px,
+        $progress_back_color 12px
+      );
+  
+    background-size: 200%,100%;
+    background-position: -100%;
+    background-repeat: repeat-y;
+}
+
+

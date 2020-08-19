@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gifOS</title>
+    <link rel="stylesheet" id="themeStyle" href="./Styles/light_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon"  type="image/png"  href="./Assets/gifOF_logo.png">
+
+</head>
+<body>
+    <header class="header_sect">
+        <div class="global_div_top header_text_cont">
+            <p class="header_text">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803<span class="visitors_number"></span></p>
+        </div>  
+        <div class="create_themes_cont">
+            <div class="arrow_logo">
+                <img src="#" alt="back_arrow" class="back_arrow" id="back_arrow">
+                <a id="logo_anchor"><img src="#" alt="gifOS_logo" class="logo"></a>
+            </div>
+            <div class="create_choose_mygifs" id="create_choose_mygifs">
+                <button class="web_button pink_but create_gif_but regular_text" id="create_gif_but">Crear Guifos</button>
+                <div class="choose_theme_cont" id="choose_theme_cont">
+                    <button class="web_button pink_but choose_theme_but regular_text" id="choose_theme_btn1">Elegir tema</button>
+                    <button class="web_button pink_but choose_theme_dropdown" id="choose_theme_btn2"><span class="dropdown_arrow" id="choose_theme_btn"></span></button>
+                    <div class="theme_list_cont" id="theme_list_cont">
+                        <ul class="list_class theme_list">
+                            <li><a href="#" id="theme_day" class="theme_day regular_text">Sailor Day</a></li>
+                            <li><a href="#" id="theme_night" class="theme_night regular_text">Sailor Night</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="my_gifos_link regular_text" id="my_gifos_link">Mis Guifos</a>
+            </div>
+        </div>
+    </header>
+    <!-- search section -->
+    <section class="section_class search_sect" id="search_sect">
+            <div class="search_cont gray_backgound" id="search_cont">
+                <div class="global_div_top search_title">
+                    <p class="div_title">Buscar</p>
+                </div>
+                <div class="search_input_cont">
+                    <input type="text" id="search_input" class="text_input search_input" oninput="autoComplete()" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                    <button class="web_button pink_but search_but" id="search_but"><span class="magnifing_glass"></span>Buscar</button>
+                </div>
+            </div>
+            <div class="search_results_cont" id="search_results_cont">
+                <ul class="list_class search_result_list" id="search_result_list">
+                    <li id="search_li_1"><a href="#" id="search_result1" class="search_result regular_text"></a></li>
+                    <li id="search_li_2"><a href="#" id="search_result2" class="search_result regular_text"></a></li>
+                    <li id="search_li_3"><a href="#" id="search_result3" class="search_result regular_text"></a></li>
+                </ul>
+            </div>
+            <div class="search_history_cont" id="search_history_cont"></div>
+    </section>
+    <!-- suggestions section -->
+    <section class="section_class suggestions_sect" id="suggestions_sect">
+        <div class="text_input text_input_alike suggestions_text">
+            <p class="regular_text blue_text">Hoy te sugerimos:</p>
+        </div>
+        <div class="suggest_img_global_cont">
+            <div class="suggest_img_cont gray_backgound">
+                <div class="global_div_top suggest_img_title suggest_img_1">
+                    <p class="div_title suggestion_title" id="suggestion_title_1"></p>
+                    <button class="close_suggest_but"></button>
+                </div>
+                <div class="suggest_img">
+                    <button class="blue_but show_more_sug" id="show_more_1">Ver más...</button>
+                </div>
+            </div>
+            <div class="suggest_img_cont gray_backgound">
+                <div class="global_div_top suggest_img_title suggest_img_2">
+                    <p class="div_title suggestion_title" id="suggestion_title_2"></p>
+                    <button class="close_suggest_but"></button>
+                </div>
+                <div class="suggest_img">
+                    <button class="blue_but show_more_sug" id="show_more_2">Ver más...</button>
+                </div>
+            </div>
+            <div class="suggest_img_cont gray_backgound">
+                <div class="global_div_top suggest_img_title suggest_img_3">
+                    <p class="div_title suggestion_title" id="suggestion_title_3"></p>
+                    <button class="close_suggest_but"></button>
+                </div>
+                <div class="suggest_img">
+                    <button class="blue_but show_more_sug" id="show_more_3">Ver más...</button>
+                </div>
+            </div>
+            <div class="suggest_img_cont gray_backgound">
+                <div class="global_div_top suggest_img_title suggest_img_4">
+                    <p class="div_title suggestion_title" id="suggestion_title_4"></p>
+                    <button class="close_suggest_but"></button>
+                </div>
+                <div class="suggest_img">
+                    <button class="blue_but show_more_sug" id="show_more_4">Ver más...</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- capture section -->
+    <section class="section_class capture_sect" id="capture_sect">
+        <div class="create_gif_cont gray_backgound" id="create_gif_cont">
+            <div class="global_div_top create_title">
+                <p class="div_title">Crear Guifos</p>
+            </div>
+            <div class="create_icon_text">
+                <img src="./Assets/window_img.png" alt="" class="window_icon">
+                <div class="create_text">
+                    <h1>Aquí podrás crear tus propios guifos</h1><br>
+                    <p class="regular_text">Crear tu <span class="italic">guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. 
+                        Los pasos para crear tu guifo son: <br>
+                        <br><span>1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br>
+                        <br><span>2)</span> Capturar tu momento guifo<br>
+                        <br><span>3)</span> Revisar el momento<br>
+                        <br><span>4)</span> Listo para subir y compartir!<br>
+                        <br>¿Quieres comenzar a crear tu <span class="italic">guifo</span> ahora?
+                    </p>
+                </div>
+            </div>
+            <div class="create_btns">
+                <button class="white_btn capture_btn cancel_btn" id="cancel_btn">Cancelar</button>
+                <button class="capture_btn start_btn pink_but" id="start_btn">Comenzar</button>
+            </div>
+        </div>
+        <div class="video_capture_cont gray_backgound" id="video_capture_cont">
+            <div class="global_div_top video_capture_title">
+                <p class="div_title" id="capture_cont_title_text">Un Chequeo Antes de Empezar</p>
+                <button class="close_capture_but"></button>
+            </div>
+            <div class="gif_global_cont">
+                <video class="video_cont" id="video_cont"></video>
+                <!-- <img src="" class="gif_cont" id="gif_cont" alt=""> -->
+                <div class="uploading_gif_msg" id="uploading_gif_msg">
+                    <img src="./Assets/globe_img.png" alt="" class="globe_icon">
+                    <h1 class="uploading_msg">Estamos subiendo tu guifo…</h1>
+                    <div class="progress_bar upload_progress discreteProgress" id="upload_progress"></div>
+                    <p class="upload_time_remaining">Tiempo restante: <span>38 años</span> algunos minutos</p>
+                </div>
+            </div>
+            <div class="start_capture_btn_cont" id="start_capture_btn_cont">
+                <button class="web_button pink_but start_capture_btn_cam" id="start_capture_btn1"><span class="camera_logo" id="start_capture_btn"></span></button>
+                <button class="web_button pink_but start_capture_btn regular_text" id="start_capture_btn2">Capturar</button>
+            </div>    
+            <div class="stop_capture_btn_cont" id="stop_capture_btn_cont">
+                <div class="record_counter_cont text_input search_input" id="record_counter_cont">
+                    <p class="record_counter regular_text blue_text" id="record_counter"></p>
+                </div>
+                <div class="stop_btn_cont" id="stop_btn_cont"> 
+                    <button class="web_button pink_but stop_capture_btn_cam" id="stop_capture_btn1"><span class="recording_logo" id="stop_capture_btn"></span></button>
+                    <button class="web_button pink_but stop_capture_btn regular_text" id="stop_capture_btn2">Listo</button>
+                </div>
+                <div class="upload_gif_btn_cont" id="upload_gif_btn_cont">
+                    <div class="replay_gifo_cont">
+                        <button class="pink_but gifo_play_btn" id="gifo_play_btn"><span class="forward_icon"></span></button>
+                        <div class="progress_bar replay_bar discreteProgress" id="replay_bar"></div>
+                    </div>
+                    <div class="upload_btns">
+                        <button class="white_btn capture_btn cancel_btn" id="repeat_capture_btn">Repetir Captura</button>
+                        <button class="capture_btn start_btn pink_but" id="upload_capture_btn">Subir Guifo</button>
+                    </div>
+                </div> 
+            </div> 
+                
+            <div class="cancel_upload_btn_cont" id="cancel_upload_btn_cont">
+                <button class="white_btn cancel_upload_btn" id="cancel_upload_btn">Cancelar</button>
+            </div>
+        </div>
+        <div class="upload_success_global_cont gray_backgound" id="upload_success_global_cont">
+            <div class="global_div_top post_upload_title">
+                <p class="div_title">Guifo Subido Con Éxito</p>
+                <button class="close_capture_but"></button>
+            </div>
+            <div class="gif_and_options">
+                <img src="#" alt="post_upload_gif" class="post_upload_gif" id="post_upload_gif">
+                <div class="gif_options">
+                    <h1 class="options_title">Guifo creado con éxito</h1>
+                    <button class="white_btn copy_gif_url" id="copy_gif_url">Copiar Enlace Guifo</button>
+                    <button class="white_btn download_gif" id="download_gif">Descargar Guifo</button>
+                </div>
+            </div>
+            <button class="pink_but post_upload_ready_btn" id="post_upload_ready_btn">Listo</button>
+        </div>
+    </section>
+    <!-- trends section -->
+    <section class="section_class trends_sect" id="trends_sect">
+        <div class="text_input text_input_alike trends_text">
+            <p class="regular_text blue_text" id="trends_text">Tendencias:</p>
+        </div>
+        <div class="trends_img_global_cont" id="trends_img_global_cont">
+        </div>
+    </section>
+    <script type="text/javascript" src="./Scripts/common_functions.js"></script>
+    <script type="text/javascript" src="./Scripts/media_handling_functions.js"></script>
+    <script type="text/javascript" src="./Scripts/giphy_functions.js"></script>
+    <script type="text/javascript" src="./Scripts/variables_listeners.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+</body>
+</html>
